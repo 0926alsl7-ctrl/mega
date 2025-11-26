@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Gaegu&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 1.4;
+  color: #1c1c1b;
+}
+.eng {
+  font-family: "Roboto", "Noto Sans" sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #1c1c1b;
+}
+header {
+  width: 100%;
+  height: 104.64px;
+  padding: 0px 20px;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 1000;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin: auto 0;
+}
+header:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+header .header_inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  position: relative;
+}
+.header_inner .logo {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 200px;
+}
+.logo a {
+  cursor: pointer;
+}
+.logo img {
+  display: block;
+  width: 200px;
+  height: 51px;
+}
+
+.menu {
+  width: calc(100% - 600px);
+  display: block;
+  margin: auto;
+}
+.main-menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.main-menu > li {
+  width: 16.66%;
+  position: relative;
+  transition: background 0.2s ease;
+}
+.main-menu > li > a {
+  font-size: 1.1em;
+  padding: 40px 0;
+  display: inline-block;
+  color: #1c1c1b;
+  font-weight: 500;
+  position: relative;
+}
+.main-menu > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1c1c1b;
+  transition: all 0.4s ease;
+  transform-origin: center;
+  transform: scaleX(0);
+}
+.main-menu > li:hover .main-menu li {
+  background-color: #fdd000;
+}
+.main-menu li:hover .submenu {
+  height: 210px;
+  background-color: #fdd000;
+}
+.main-menu li:hover header .submenu-bg {
+  transform: scaleY(1);
+}
+.main-menu li:hover a:active::before {
+  transform: scaleX(1);
+}
+.submenu-bg {
+  position: absolute;
+  top: 104px;
+  left: 0;
+  width: 100vw;
+  transform: scaleY(0);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  padding: 110px 0;
+}
+
+.submenu {
+  height: 0;
+  position: absolute;
+  top: 104px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding-top: 30px;
+}
+.submenu > li > a {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.header_inner .sns {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 196px;
+}
+.sns ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sns li {
+  box-shadow: 0 0 0 2px #1c1c1b;
+  border-radius: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.sns li:hover {
+  box-shadow: 0 0 0 2px #fdd000;
+  background-color: #fdd000;
+}
+.sns li a {
+  display: block;
+  padding: 3px;
+  position: relative;
+}
+.sns li a img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main .slide {
+  width: 100%;
+  height: 100%;
+}
+main img {
+  width: 100%;
+  height: 100%;
+}
