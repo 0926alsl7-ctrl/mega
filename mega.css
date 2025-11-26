@@ -36,18 +36,20 @@ header {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   margin: auto 0;
 }
 header:hover {
+  height: 300px;
   background-color: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 header .header_inner {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
+  align-items: flexstart;
   /* align-items: center;
   justify-content: center; */
   position: relative;
@@ -68,9 +70,9 @@ header .header_inner {
 }
 
 .menu {
-  width: calc(100% - 600px);
+  width: calc(100% - 500px);
   display: block;
-  margin: auto;
+  margin: 0 auto;
 }
 .main-menu {
   display: flex;
@@ -82,7 +84,7 @@ header .header_inner {
 .main-menu > li {
   width: 16.66%;
   position: relative;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 }
 .main-menu > li > a {
   font-size: 1.1em;
@@ -103,47 +105,53 @@ header .header_inner {
   transform-origin: center;
   transform: scaleX(0);
 }
-.main-menu > li:hover .main-menu li {
+.main-menu li:hover {
   background-color: #fdd000;
 }
-.main-menu li:hover .submenu {
-  height: 210px;
-  background-color: #fdd000;
-}
-.main-menu li:hover header .submenu-bg {
-  transform: scaleY(1);
-}
-.main-menu li:hover a:active::before {
-  transform: scaleX(1);
-}
-.submenu-bg {
+
+.submenu-area {
   position: absolute;
-  top: 104px;
-  left: 0;
-  width: 100vw;
-  transform: scaleY(0);
-  transition: all 0.3s ease;
-  background-color: #fff;
-  padding: 110px 0;
+  top: 104.64px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 500px);
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transform-origin: top center;
+  pointer-events: none;
+  transition: all 0.2 ease;
+  z-index: 1100;
+}
+.submenu-area ul {
+  width: calc(100% / 6);
+}
+
+header:hover .submenu-area {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 
 .submenu {
-  height: 0;
-  position: absolute;
-  top: 104px;
-  left: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  padding-top: 30px;
+  gap: 6px;
 }
-.submenu > li > a {
+.submenu li a {
   display: block;
-  font-size: 0.9em;
-  font-weight: 400;
+  padding: 6px 0;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+header:hover {
+  height: 300px;
 }
 
 .header_inner .sns {
