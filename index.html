@@ -6,7 +6,13 @@
     <title>메가MGC커피</title>
     <link rel="icon" href="/images/favicon.ico" sizes="16x16" />
     <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="mega.css" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="mega.js" defer></script>
   </head>
   <body>
@@ -14,27 +20,36 @@
       <div class="header_inner">
         <div class="logo">
           <a href="#">
-            <img src="images/new_logo_b.png" alt="header_logo" />
+            <img
+              src="images/new_logo_b.png"
+              alt="header_logo"
+              class="logo_img"
+            />
+            <img
+              src="images/new_logo.png"
+              alt="header_logo"
+              class="logo_img_fixed"
+            />
           </a>
         </div>
         <div class="menu">
           <ul class="main-menu">
-            <li data-index="0">
+            <li data-index="0" class="li_line_hov">
               <a href="#">메가 스토리</a>
             </li>
-            <li data-index="1">
+            <li data-index="1" class="li_line_hov">
               <a href="#">메뉴소개</a>
             </li>
-            <li data-index="2">
+            <li data-index="2" class="li_line_hov">
               <a href="#">매장</a>
             </li>
-            <li data-index="3">
+            <li data-index="3" class="li_line_hov">
               <a href="#">창업안내</a>
             </li>
-            <li data-index="4">
+            <li data-index="4" class="li_line_hov">
               <a href="#">메가소식</a>
             </li>
-            <li data-index="5">
+            <li data-index="5" class="li_line_hov">
               <a href="#">채용</a>
             </li>
           </ul>
@@ -75,23 +90,23 @@
         </div>
 
         <div class="submenu-area">
-          <ul class="submenu">
+          <ul class="submenu" data-index="0">
             <li><a href="#">브랜드</a></li>
             <li><a href="#">BI</a></li>
             <li><a href="#">오시는 길</a></li>
           </ul>
 
-          <ul class="submenu">
+          <ul class="submenu" data-index="1">
             <li><a href="#">음료</a></li>
             <li><a href="#">푸드</a></li>
             <li><a href="#">상품</a></li>
           </ul>
 
-          <ul class="submenu">
+          <ul class="submenu" data-index="2">
             <li><a href="#">매장찾기</a></li>
           </ul>
 
-          <ul class="submenu">
+          <ul class="submenu" data-index="3">
             <li><a href="#">개설비용</a></li>
             <li><a href="#">인테리어</a></li>
             <li><a href="#">창업문의</a></li>
@@ -99,93 +114,175 @@
             <li><a href="#">창업뉴스</a></li>
           </ul>
 
-          <ul class="submenu">
+          <ul class="submenu" data-index="4">
             <li><a href="#">공지사항</a></li>
             <li><a href="#">이벤트</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">고객의 소리</a></li>
           </ul>
 
-          <ul class="submenu sub">
+          <ul class="submenu sub" data-index="5">
             <li><a href="#">채용안내</a></li>
           </ul>
         </div>
       </div>
     </header>
     <main>
-      <div class="cont_box" id="section1">
-        <div class="fp-tableCell">
-          <div class="swiper_wrap">
-            <div class="swiper">
-              <div class="swiper-container swiper-container-mobile">
-                <ul class="swiper-wrapper">
-                  <li class="swiper-slide">
-                    <div
-                      class="swiper-slide_img swiper-slide_img_pc"
-                      style="background-image: url(images/slide1.jpg)"
-                    ></div>
-                    <div class="swiper-slide_img swiper-slide_img_m"></div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div
-                      class="swiper-slide_img swiper-slide_img_pc"
-                      style="background-image: url(images/slide2.jpg)"
-                    ></div>
-                    <div class="swiper-slide_img swiper-slide_img_m"></div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div
-                      class="swiper-slide_img swiper-slide_img_pc"
-                      style="background-image: url(images/slide3.jpg)"
-                    ></div>
-                    <div class="swiper-slide_img swiper-slide_img_m"></div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div
-                      class="swiper-slide_img swiper-slide_img_pc"
-                      style="background-image: url(images/slide4.jpg)"
-                    ></div>
-                    <div class="swiper-slide_img swiper-slide_img_m"></div>
-                  </li>
-                  <li class="swiper-slide">
-                    <div
-                      class="swiper-slide_img swiper-slide_img_pc"
-                      style="background-image: url(images/slide5.jpg)"
-                    ></div>
-                    <div class="swiper-slide_img swiper-slide_img_m"></div>
-                  </li>
-                </ul>
-                <div class="swiper-button_wrapper">
-                  <div class="swiper-button_box">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+      <div class="main_wrap">
+        <div class="cont_box" id="section1">
+          <div class="fp-tableCell">
+            <div class="swiper_wrap">
+              <div class="swiper">
+                <div class="swiper-container swiper-container-mobile">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide1.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide7.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide6.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide5.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide4.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide3.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                    </li>
+                  </ul>
+                  <div class="swiper-button_wrapper">
+                    <div class="swiper-button_box">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-page">
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="swiper-page">
+              </div>
+            </div>
+            <div class="scroll_down_icon_wrap">
+              <div class="scroll_down_icon">
+                <span class="scroll_down_icon_mouse">
+                  <span class="scroll_down_icon_mouse_move"></span>
+                </span>
+                <div class="scroll_down_text">스크롤을 내리세요!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cont_box" id="section2">
+          <div class="fp-tableCell">
+            <div class="sec2_middle">
+              <div class="cont_boxs">
+                <div class="cont_list">
                   <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                      <div class="cont_title_wrap">
+                        <div class="cont_title_info">
+                          메가MGC커피 겨울시즌 신메뉴
+                        </div>
+                        <div class="cont_title_fade robo">
+                          <h3>
+                            <span class="cont_title_fade_bg_active">
+                              Back to 2005⭐
+                              <br />
+                              그 시절, 우리가 사랑한 맛
+                            </span>
+                          </h3>
+                        </div>
+                      </div>
+                      <div class="cont_text_wrap">
+                        <div class="cont_text_title"></div>
+                        <div class="cont_text_fade"></div>
+                        <div class="cont_text_fade"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="wiper_wrap">
+                        <div class="swiper">
+                          <div class="swiper_overflow_container">
+                            <div class="swiper-container">
+                              <ul class="swiper-wrapper">
+                                <li class="swiper-slide"></li>
+                              </ul>
+                              <div class="swiper-button-next"></div>
+                              <div class="swiper-button-prev"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="scroll_down_icon_wrap">
-            <div class="scroll_down_icon">
-              <span class="scroll_down_icon_mouse">
-                <span class="scroll_down_icon_mouse_move"></span>
-              </span>
-              <div class="scroll_down_text">스크롤을 내리세요!</div>
-            </div>
-          </div>
         </div>
+        <div class="cont_box" id="section3"></div>
+        <div class="cont_box" id="section4"></div>
+        <div class="cont_box" id="section5"></div>
       </div>
-      <aside></aside>
-      <aside></aside>
     </main>
-    <article></article>
+    <div class="aside_menu robo">
+      <ul>
+        <li class="aside_menu_list on">
+          <span></span>
+          <div class="aside_menu_list_title">MAIN</div>
+        </li>
+        <li class="aside_menu_list">
+          <span></span>
+          <div class="aside_menu_list_title">MENU</div>
+        </li>
+        <li class="aside_menu_list">
+          <span></span>
+          <div class="aside_menu_list_title">FRANCHISE</div>
+        </li>
+        <li class="aside_menu_list">
+          <span></span>
+          <div class="aside_menu_list_title">MEGA</div>
+        </li>
+        <li class="aside_menu_list">
+          <span></span>
+          <div class="aside_menu_list_title">EVENT</div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
