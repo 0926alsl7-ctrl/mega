@@ -20,7 +20,7 @@ document.querySelector("header").addEventListener("mouseleave", () => {
   subCols.forEach((col) => (col.style.backgroundColor = "transparent"));
 });
 
-// swiper
+// (1) 스크롤 이벤트
 
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper-container", {

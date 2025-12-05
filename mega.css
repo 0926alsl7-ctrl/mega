@@ -211,6 +211,7 @@ header:hover .submenu-area {
 
 main {
   width: 100%;
+  /* height: auto; */
   position: relative;
   touch-action: none;
   padding-top: 0;
@@ -238,7 +239,8 @@ main {
 .swiper {
   width: 100%;
   height: 100%;
-  max-width: inherit;
+  max-width: 1280px;
+  /* max-width: inherit; */
   margin: 0 auto;
 }
 .swiper-container {
@@ -385,6 +387,316 @@ main {
 .scroll_down_text {
   margin-top: 5px;
   font-size: 15px;
+}
+
+/* 섹션2 */
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade_up {
+  animation-name: fade_up;
+}
+.sec2_middle {
+  font-size: 13px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1280px) {
+  .main_wrap .cont_box .cont_boxs {
+    padding: 60px;
+  }
+}
+.cont_boxs {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/* .main_wrap .cont_box .cont_boxs {
+  padding: 0px 100px;
+} */
+.cont_boxs:last-child {
+  margin-bottom: 0;
+}
+
+.cont_list {
+  display: block;
+}
+.cont_list > ul {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.cont_list > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.swiper_overflow_left > ul > li:first-child {
+  position: relative;
+  z-index: 3;
+}
+.cont_list_content > ul > li {
+  margin-right: 50px !important;
+  margin-top: 0 !important;
+  width: calc(1 / 2 * 100% - (1 - 1 / 2) * 50px) !important;
+}
+.cont_title_wrap {
+  font-size: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.cont_title_info:first-child {
+  margin-top: 0;
+}
+.cont_title_info {
+  margin: 15px 0;
+}
+.cont_title {
+  font-size: 1.48em;
+  transition-timing-function: ease;
+  transition-duration: 1.2s;
+}
+.cont_title h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.cont_title_bg {
+  position: relative;
+}
+.cont_title_bg::before {
+  content: "";
+  transition: all 0.4s ease;
+  background-color: #fdd000;
+  position: absolute;
+  height: 50%;
+  z-index: -1;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cont_title_bg_active::before {
+  width: 100%;
+  padding: 0px 5px;
+}
+.cont_text:last-child {
+  margin-bottom: 0 !important;
+}
+
+.cont_text_wrap {
+  transition-timing-function: ease;
+  transition-duration: 1.2s;
+  margin-bottom: 0;
+}
+.cont_text_title {
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.cont_text_title b {
+  font-weight: 400;
+}
+.cont_text {
+  transition-timing-function: ease;
+  transition-duration: 1.2s;
+  margin: 20px 0;
+  font-size: 13px;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animation03 {
+  animation-delay: 0.4s !important;
+}
+.animation04 {
+  animation-delay: 0.6s !important;
+}
+.animation05 {
+  animation-delay: 0.8s !important;
+}
+.animation06 {
+  animation-delay: 1s !important;
+}
+.input_btn_wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+.input_wrap3 {
+  height: 55px !important;
+}
+.input_wrap3 .btn {
+  font-size: 18px;
+  padding: 0px 30px;
+  cursor: pointer;
+}
+.btn {
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn1 {
+  background-color: #fdd000;
+  color: #1c1c1b;
+  border: 0;
+}
+.cont_list_content > ul > li:last-child {
+  margin-right: 0 !important;
+}
+.section_menu .swiper_wrap {
+  height: 100%;
+}
+.section_menu .swiper {
+  max-width: 420px;
+}
+
+.swiper_overflow_container {
+  overflow: visible;
+  position: relative;
+}
+.swiper_overflow_container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: -300%;
+  z-index: 2;
+  transform: scale(5);
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+}
+.section_menu .swiper-wrapper {
+  height: 100% !important;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.section_menu .cont_gallery_list > ul > li {
+  width: 100% !important;
+  box-shadow: none;
+  align-self: flex-end;
+}
+.cont_gallery_list > ul > li {
+  position: relative;
+}
+.section_menu .swiper-slide {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  margin-right: 15px;
+  flex-shrink: 0;
+  height: 100%;
+}
+.cont_gallery_list > ul li .cont_gallery_list_box {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  background-color: #fff;
+}
+.cont_gallery_list_box img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+.cont_gallery_list_box .cont_text_wrap {
+  padding: 8%;
+}
+.section_menu .swiper-slide-active .cont_text_wrap {
+  display: block;
+}
+.section_meu .swiper-slide .cont_text_wrap {
+  display: none;
+  background: #f4f6f8;
+}
+.cont_gallery_list .text_wrap .text {
+  word-break: break-word;
+}
+.cont_text:first-child {
+  margin-top: 0;
+}
+.cont_text_inner:first-child {
+  margin-top: 0 !important;
+}
+.cont_text_inner:last-child {
+  margin-bottom: 0 !important;
+}
+.cont_text_inner {
+  margin: 5px 0;
+}
+.text_wrap .text.text2 {
+  height: 2.6em;
+}
+.text_wrap .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+}
+.text_wrap .text.text1 {
+  height: 1.3em;
+}
+.cont_text_info {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+@media screen and (max-width: 1280px) {
+  .section_menu .swiper-button-next,
+  .section_menu .swiper-button-prev {
+    display: none !important;
+  }
+}
+.section_menu .swiper-button-next,
+.section_menu .swiper-button-prev {
+  top: 20%;
+  opacity: 0.2 !important;
+}
+.section_menu .swiper-button-next {
+  left: 520px !important;
+}
+.section_menu .swiper-button-prev {
+  left: 480px !important;
+}
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
 }
 .aside_menu {
   display: block;
