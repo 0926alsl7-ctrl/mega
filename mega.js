@@ -23,7 +23,6 @@ document.querySelector("header").addEventListener("mouseleave", () => {
 // swiper
 
 document.addEventListener("DOMContentLoaded", () => {
-  // === 스와이퍼 === //
   const swiper = new Swiper(".swiper-container", {
     loop: false,
     speed: 700,
@@ -53,42 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   updatePagination(0);
 
-  // === 섹션 이동 기능 === //
   const mainWrap = document.querySelector(".main_wrap");
   const sections = document.querySelectorAll(".cont_box");
   const asideItems = document.querySelectorAll(".aside_menu_list");
-  const header = document.querySelector("header"); // ★ header 가져오기
+  const header = document.querySelector("header");
 
   let currentIndex = 0; // 현재 섹션 인덱스 저장 (0 = section1)
 
-  // === 헤더 업데이트 함수 === //
   function updateHeader(index) {
     if (index === 0) {
       header.classList.remove("fixed");
     } else {
-      // section1일 때만 원래 상태
       header.classList.add("fixed");
     }
   }
 
-  // === 특정 섹션으로 이동 === //
   function goToSection(index) {
     currentIndex = index;
     const offset = sections[index].offsetTop;
 
     mainWrap.style.transform = `translateY(-${offset}px)`;
     updateAsideMenu();
-    updateHeader(index); // ★ 이동할 때마다 자동으로 헤더 업데이트
+    updateHeader(index);
   }
 
-  // === aside 'on' 업데이트 === //
   function updateAsideMenu() {
     asideItems.forEach((item, i) => {
       item.classList.toggle("on", i === currentIndex);
     });
   }
 
-  // === Scroll Down 버튼 → section2 이동 === //
   document.querySelector(".scroll_down_icon").addEventListener("click", () => {
     goToSection(1);
   });
