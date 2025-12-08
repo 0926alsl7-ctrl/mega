@@ -15,9 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="mega.js" defer></script>
   </head>
-  <body>
-    <header>
-      <div class="header_inner">
+  <body class="main_body">
+    <div class="wrap">
+    <div class="nav_wrap"></div>
+    <div class="header_wrap">
+      <div class="header">
         <div class="logo">
           <a href="#">
             <img
@@ -32,38 +34,96 @@
             />
           </a>
         </div>
-        <div class="menu">
-          <ul class="main-menu">
-            <li data-index="0" class="li_line_hov">
-              <a href="#">메가 스토리</a>
+        <div class="header_menu_wrap">
+        <div class="header_menu_logo m">
+          <img src="images/logo_w.png" alt="logo_m">
+        </div>
+        <div class="header_menu">
+          <ul>
+            <li class>
+              <a href="#" class="pc">메가 스토리</a>
+              <a class="m head_menu_down">메가 스토리</a>
+              <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+             >
+                <ul>
+                  <li><a href="#">브랜드</a></li>
+                  <li><a href="#">BI</a></li>
+                  <li><a href="#">오시는 길</a></li>
+                </ul>
+              </div>
             </li>
-            <li data-index="1" class="li_line_hov">
-              <a href="#">메뉴소개</a>
+            <li class>
+              <a href="#" class="pc">메뉴소개</a>
+              <a class="m head_menu_down">메뉴소개</a>
+               <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+               >
+                <ul>
+                  <li><a href="#">음료</a></li>
+                  <li><a href="#">푸드</a></li>
+                  <li><a href="#">상품</a></li>
+                </ul>
+              </div>
             </li>
-            <li data-index="2" class="li_line_hov">
-              <a href="#">매장</a>
+            <li class>
+              <a href="#" class="pc">매장</a>
+              <a class="m head_menu_down">매장</a>
+               <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+               >
+                <ul style="display: block;">
+                  <li><a href="#">매장찾기</a></li>
+                </ul>
+              </div>
             </li>
-            <li data-index="3" class="li_line_hov">
-              <a href="#">창업안내</a>
+            <li class>
+              <a href="#" class="pc">창업안내</a>
+              <a class="m head_menu_down">창업안내</a>
+               <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+              >
+                <ul>
+                  <li><a href="#">개설비용</a></li>
+                  <li><a href="#">인테리어</a></li>
+                  <li><a href="#">창업문의</a></li>
+                  <li><a href="#">가맹점 인수</a></li>
+                  <li><a href="#">창업뉴스</a></li>
+                </ul>
+              </div>
             </li>
-            <li data-index="4" class="li_line_hov">
-              <a href="#">메가소식</a>
+            <li class>
+              <a href="#" class="pc">메가소식</a>
+              <a class="m head_menu_down">메가소식</a>
+               <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+                >
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">고객의 소리</a></li>
+                </ul>
+              </div>
             </li>
-            <li data-index="5" class="li_line_hov">
-              <a href="#">채용</a>
+            <li class>
+              <a href="#" class="pc">채용</a>
+              <a class="m head_menu_down">채용</a>
+               <div class="header_menu_down cont_list cont_list_small cont_list_small1"
+               >
+                <ul>
+                  <li><a href="#">채용안내</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
-
+        </div>
         <div class="sns">
+          <div class="cont_list cont_list_small">
           <ul>
             <li>
-              <a href="#"
+              <a href="https://blog.naver.com/mega_mgc_coffee"
                 ><img src="images/sns_blog.png" alt="icon" style="width: 33px"
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="https://www.facebook.com/mega.mgc.coffee.official"
                 ><img
                   src="images/sns_facebook.png"
                   alt="icon"
@@ -71,7 +131,7 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="https://www.instagram.com/mega.mgc.coffee_official/"
                 ><img
                   src="images/sns_instagram.png"
                   alt="icon"
@@ -79,7 +139,7 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="https://smartstore.naver.com/megamgccoffee"
                 ><img
                   src="images/sns_smartstore.png"
                   alt="icon"
@@ -87,101 +147,82 @@
               /></a>
             </li>
           </ul>
+          </div>
         </div>
-
-        <div class="submenu-area">
-          <ul class="submenu" data-index="0">
-            <li><a href="#">브랜드</a></li>
-            <li><a href="#">BI</a></li>
-            <li><a href="#">오시는 길</a></li>
-          </ul>
-
-          <ul class="submenu" data-index="1">
-            <li><a href="#">음료</a></li>
-            <li><a href="#">푸드</a></li>
-            <li><a href="#">상품</a></li>
-          </ul>
-
-          <ul class="submenu" data-index="2">
-            <li><a href="#">매장찾기</a></li>
-          </ul>
-
-          <ul class="submenu" data-index="3">
-            <li><a href="#">개설비용</a></li>
-            <li><a href="#">인테리어</a></li>
-            <li><a href="#">창업문의</a></li>
-            <li><a href="#">가맹점 인수</a></li>
-            <li><a href="#">창업뉴스</a></li>
-          </ul>
-
-          <ul class="submenu" data-index="4">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">이벤트</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">고객의 소리</a></li>
-          </ul>
-
-          <ul class="submenu sub" data-index="5">
-            <li><a href="#">채용안내</a></li>
-          </ul>
+        <div class="mobile_menu_icon_wrap m">
+          <div class="mobile_menu_icon"></div>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="main_wrap">
-        <div class="cont_box" id="section1">
+    </div>
+    <div class="main_wrap">
+      <main>
+        <div id="section1" class="cont_box section_main">
           <div class="fp-tableCell">
             <div class="swiper_wrap">
               <div class="swiper">
-                <div class="swiper-container swiper-container-mobile">
+                <div class="swiper-container section_main_swiper swiper-container-mobile">
                   <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide0.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide0.jpg);"></div>
+                    </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide1.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide1.jpg);"></div>
                     </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide7.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide2.jpg);"></div>
                     </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide6.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide3.jpg);"></div>
                     </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide5.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide4.jpg);"></div>
                     </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide4.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide5.jpg);"></div>
                     </li>
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide3.jpg)"
                       ></div>
-                      <div class="swiper-slide_img swiper-slide_img_m"></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide6.jpg);"></div>
                     </li>
                   </ul>
                   <div class="swiper-button_wrapper">
                     <div class="swiper-button_box">
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next swiper-button-disabled"></div>
+                      <div class="swiper-button-prev swiper-button-disabled"></div>
                     </div>
                   </div>
                   <div class="swiper-page">
@@ -207,7 +248,7 @@
             </div>
           </div>
         </div>
-        <div class="cont_box section_menu" id="section2">
+        <div  id="section2" class="cont_box section_menu">
           <div class="fp-tableCell">
             <div class="sec2_middle">
               <div class="cont_boxs">
@@ -376,12 +417,12 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="cont_box" id="section3"></div>
-        <div class="cont_box" id="section4"></div>
-        <div class="cont_box" id="section5"></div>
-      </div>
-    </main>
+        <div id="section3" class="cont_box"></div>
+        <div id="section4" class="cont_box"></div>
+        <div id="section5" class="cont_box"></div>
+      </main>
+    </div>
+    </div>
     <div class="aside_menu robo">
       <ul>
         <li class="aside_menu_list on">
