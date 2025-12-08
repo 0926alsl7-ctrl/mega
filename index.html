@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>메가MGC커피</title>
     <link rel="icon" href="/images/favicon.ico" sizes="16x16" />
     <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
@@ -12,7 +12,10 @@
     />
     <link rel="stylesheet" href="mega.css" />
     <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <!-- <script src="vendors/easings.min.js"></script> -->
     <script src="mega.js" defer></script>
   </head>
   <body class="main_body">
@@ -154,9 +157,9 @@
         </div>
       </div>
     </div>
-    <div class="main_wrap">
-      <main>
-        <div id="section1" class="cont_box section_main">
+    <div class="main_wrap cont_wrap" id="fullpage">
+      <div class ="main fullpage-wrapper">
+        <div id="section1" class="cont_box section_main section active" date-anchor="main">
           <div class="fp-tableCell">
             <div class="swiper_wrap">
               <div class="swiper">
@@ -248,7 +251,7 @@
             </div>
           </div>
         </div>
-        <div  id="section2" class="cont_box section_menu">
+        <div id="section2" class="cont_box section_menu section" date-anchor="menu">
           <div class="fp-tableCell">
             <div class="sec2_middle">
               <div class="cont_boxs">
@@ -417,10 +420,11 @@
               </div>
             </div>
           </div>
-        <div id="section3" class="cont_box"></div>
-        <div id="section4" class="cont_box"></div>
-        <div id="section5" class="cont_box"></div>
-      </main>
+        <div id="section3" class="cont_box section_franchise section" date-anchor="franchise"></div>
+        <div id="section4" class="cont_box section_company section" date-anchor="mega"></div>
+        <div id="section5" class="cont_box section_news section" date-anchor="news"></div>
+        <div id="section6" class="cont_box section_foot section" date-anchor="foot"></div>
+      </div>
     </div>
     </div>
     <div class="aside_menu robo">
@@ -447,5 +451,184 @@
         </li>
       </ul>
     </div>
+    <script>
+      $(document).ready(function(){
+        $("body").addClass("main_body");
+        fullpage();
+      });
+
+      function fullpage(){
+        var AsideMenuList = $(".aside_menu_list");
+        $(".main").fullpage({
+          anchors: ["main", "menu", "franchise", "mega", "news", "foot"],
+          onLeave: function(index, nextIndex, direction){
+            AsideMenuList.removeClass("on");
+            AsideMenuList.eq(nextIndex-1).addClass("on");
+
+
+          if ( nextIndex !== 1 ) {
+						$(".header_wrap").addClass("header_fixed");
+					} else {
+						$(".header_wrap").removeClass("header_fixed");
+					}
+
+          
+					if ( nextIndex == 3 ) {
+						player.playVideo();
+					};
+
+          
+          }
+        })
+      }
+    </script>
+    <!-- <script>
+      
+		$(document).ready(function(){
+			$("body").addClass("main_body");
+			fullpage();
+		});
+	//풀페이지
+		function fullpage() {
+			var ChapList = $(".aside_menu_list");
+			$(".main").fullpage({
+				//responsiveWidth: 760,
+				anchors: ["main", "menu", "franchise", "mega", "news", "foot"],
+				onLeave: function(index, nextIndex, direction){
+					ChapList.removeClass("on");
+					ChapList.eq(nextIndex-1).addClass("on");
+
+					$(".animation").removeClass("hidden");
+					$(".animation_fade_up").addClass("animated fadeUp");
+					$(".animation_fade_down").addClass("animated fadeInDown");
+					$(".animation_slide_left").addClass("animated slideInLeft");
+					$(".animation_slide_right").addClass("animated slideInRight");
+					$(this).next().find(".animation").removeClass("hidden");
+					$(this).next().find(".animation_fade_up").addClass("animated fadeUp");
+					$(this).next().find(".animation_fade_down").addClass("animated fadeInDown");
+					$(this).next().find(".animation_slide_left").addClass("animated slideInLeft");
+					$(this).next().find(".animation_slide_right").addClass("animated slideInRight");
+					$(this).prev().find(".animation").removeClass("hidden");
+					$(this).prev().find(".animation_fade_up").addClass("animated fadeUp");
+					$(this).prev().find(".animation_fade_down").addClass("animated fadeInDown");
+					$(this).prev().find(".animation_slide_left").addClass("animated slideInLeft");
+					$(this).prev().find(".animation_slide_right").addClass("animated slideInRight");
+
+					if ( nextIndex !== 1 ) {
+						$(".head_wrap").addClass("head_fixed");
+					} else {
+						$(".head_wrap").removeClass("head_fixed");
+					}
+
+					if ( nextIndex == 1 ) {
+											}
+					$(".cont_title_bg").removeClass("cont_title_bg_active");
+				},
+				afterLoad: function(index, nextIndex, direction){
+					$(".animation").removeClass("hidden");
+					$(".animation_fade_up").addClass("animated fadeInUp");
+					$(".animation_fade_down").addClass("animated fadeInDown");
+					$(".animation_slide_left").addClass("animated slideInLeft");
+					$(".animation_slide_right").addClass("animated slideInRight");
+					if ( $(this).prev().find(".animation").is("hidden") == false ) {
+						$(this).prev().find(".animation").addClass("hidden");
+						$(this).prev().find(".animation_fade_up").removeClass("animated fadeInUp");
+						$(this).prev().find(".animation_fade_down").removeClass("animated fadeInDown");
+						$(this).prev().find(".animation_slide_left").removeClass("animated slideInLeft");
+						$(this).prev().find(".animation_slide_right").removeClass("animated slideInRight");
+					}
+					if ( $(this).next().find(".animation").is("hidden") == false ) {
+						$(this).next().find(".animation").addClass("hidden");
+						$(this).next().find(".animation_fade_up").removeClass("animated fadeInUp");
+						$(this).next().find(".animation_fade_down").removeClass("animated fadeInDown");
+						$(this).next().find(".animation_slide_left").removeClass("animated slideInLeft");
+						$(this).next().find(".animation_slide_right").removeClass("animated slideInRight");
+					}
+
+					if ( nextIndex == 3 ) {
+						player.playVideo();
+					};
+
+					$(".section").eq(nextIndex-1).find(".cont_title_bg").addClass("cont_title_bg_active");
+				},
+				afterRender: function(anchorLink, index){
+					ChapList.each(function(idx){
+						$(this).click(function(){
+							$.fn.fullpage.moveTo(idx+1);
+						});
+					});
+					$(".scroll_down_icon_wrap").click(function(){
+						$.fn.fullpage.moveTo(2);
+					});
+				},
+			});
+		};
+
+		$(".section_main_swiper .youtube").hide();
+		var tag = document.createElement("script");
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		var player;
+						var player29;
+						var player21;
+		
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				width: '100%',
+				videoId: "Ppe5NIRco8A",
+				host: 'https://www.youtube.com',
+				playerVars: { 'autoplay': 0, 'playsinline': 1, 'loop' :1, 'rel' :0, 'mute' :1, 'modestbranding' :1, 'autohide':1,'showinfo':0,'controls':0, },
+				events: {
+					'onReady' : onPlayerReady,
+					'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+					'onStateChange': onPlayerStateChange,
+				}
+			});
+								player29 = new YT.Player('player29', {
+						width: '100%',
+						videoId: "9VYx2IxjZPg",
+						host: 'https://www.youtube.com',
+						playerVars: { 'autoplay': 0, 'playsinline': 1, 'loop' :1, 'rel' :0, 'mute' :1, 'modestbranding' :1, 'autohide':1,'showinfo':0,'controls':0, },
+						events: {
+							'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+							'onStateChange': onPlayerStateChange,
+						}
+					});
+								player21 = new YT.Player('player21', {
+						width: '100%',
+						videoId: "Gnv40Oifhc8",
+						host: 'https://www.youtube.com',
+						playerVars: { 'autoplay': 0, 'playsinline': 1, 'loop' :1, 'rel' :0, 'mute' :1, 'modestbranding' :1, 'autohide':1,'showinfo':0,'controls':0, },
+						events: {
+							'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+							'onStateChange': onPlayerStateChange,
+						}
+					});
+					//로드시
+			function onPlayerReady(event) {
+				setTimeout(function() {
+										$(".section_main_swiper .youtube").show();
+				}, 500);
+			}
+		//퀄리티
+			function onPlayerPlaybackQualityChange(event) {
+				var playbackQuality = event.target.getPlaybackQuality();
+				var suggestedQuality = "hd1080";
+
+				if( playbackQuality !== "hd1080") {
+					event.target.setPlaybackQuality( suggestedQuality );
+				}
+			}
+		//종료 후
+			function onPlayerStateChange(event) {
+				if (event.data === 0) {
+									}
+			}
+		}
+		var played = false;
+	
+    </script> -->
   </body>
 </html>

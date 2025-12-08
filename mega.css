@@ -89,20 +89,31 @@ body {
   overflow: hidden;
   height: 100%;
 }
-main {
-  height: 100vw;
+.main {
+  height: 100%;
   position: relative;
   touch-action: none;
   transition: 700ms;
   display: block;
 }
 
+.cont_wrap {
+  padding-top: 106px;
+}
+.main_body .cont_wrap {
+  padding-top: 0 !important;
+}
+
 /* 6. Section */
+.wrap {
+  width: 100%;
+}
+
 .main_body .cont_box {
   overflow: hidden;
 }
 .main_wrap .cont_box {
-  padding: 0 !important;
+  padding-top: 0 !important;
 }
 /* 7. Components */
 .swiper {
@@ -128,7 +139,7 @@ main {
   z-index: 1;
   display: flex;
   box-sizing: content-box;
-  transition-property: transform, -webkit-transform;
+  transition-property: transform;
 }
 .swiper-slide {
   width: 100%;
@@ -167,12 +178,34 @@ main {
   font-weight: 500;
   cursor: pointer;
 }
+.cont_box {
+  padding: 100px 0;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 /* 8. Media Queries */
+@media scree and (max-width: 760px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+  .cont_box {
+    padding: 50px 20px !important;
+  }
+  .swiper-slide_img_pc {
+    display: none;
+  }
+  .swiper-slide-img_m {
+    display: block;
+  }
+}
 @media screen and (max-width: 1280px) {
   body {
     width: 100%;
     left: 0;
     padding-top: 0 !important;
+    margin-left: 0;
     font-size: 13px;
   }
   .header_wrap {
@@ -203,6 +236,10 @@ main {
     padding: 0 !important;
     color: #aaa;
   }
+  .cont_wrap {
+    padding-top: 71px;
+  }
+
   .cont_box {
     padding: 60px !important;
   }
@@ -215,9 +252,7 @@ main {
   }
 }
 /* =========================================== */
-.wrap {
-  width: 100%;
-}
+
 .main_body .header_wrap {
   background: none;
   box-shadow: none;
@@ -389,6 +424,7 @@ main {
 }
 .main_wrap {
   width: 100%;
+  height: 100vw;
   padding-top: 0 !important;
 }
 .section_main {
@@ -408,7 +444,6 @@ main {
 }
 .section_main .swiper-wrapper {
   height: 100% !important;
-  transform: translate3d(0, 0, 0);
 }
 .section_main .swiper-slide {
   opacity: 1;
@@ -576,8 +611,8 @@ main {
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 1280px) {
-  .main_wrap .cont_box .cont_boxs {
-    padding: 60px;
+  .cont_box {
+    padding: 60px !important;
   }
 }
 .cont_boxs {
