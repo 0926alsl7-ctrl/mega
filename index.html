@@ -6,21 +6,87 @@
     <title>메가MGC커피</title>
     <link rel="icon" href="/images/favicon.ico" sizes="16x16" />
     <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
     <link rel="stylesheet" href="mega.css" />
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <!-- <script src="vendors/easings.min.js"></script> -->
     <script src="mega.js" defer></script>
   </head>
   <body class="main_body">
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content"></div>
+      </div>
+    </div>
     <div class="wrap">
-    <div class="nav_wrap"></div>
+    <div class="nav_wrap">
+      <div class="nav">
+        <ul>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+            <div class="cont_text">앱 문의 센터</div>
+            <div class="cont_text cont_text_title robo">1855-<br>3478</div>
+              </div>
+          </div>
+          </a></li>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+             <div class="cont_text">창업상담</div>
+            <div class="cont_text cont_text_title robo">1588-<br>0656</div>
+              </div>
+          </div>
+          </a></li>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+             <div class="cont_text">가맹점</div>
+            <div class="cont_text cont_text_title robo">인수 상담</div>
+                </div>
+          </div>
+          </a></li>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+             <div class="cont_text">고객센터</div>
+            <div class="cont_text cont_text_title robo">문의/접수</div>
+                </div>
+          </div>
+          </a></li>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+             <div class="cont_text">고객센터</div>
+            <div class="cont_text cont_text_title robo">1588-<br>8298</div>
+                </div>
+          </div>
+          </a></li>
+          <li><a>
+            <div class="table0">
+              <div class="cell">
+             <div class="cont_text">(25.12.04)누적</div>
+            <div class="cont_text cont_text_title robo">4,040호<br>오픈</div>
+              </div>
+          </div>
+          </a></li>
+        </ul>
+      </div>
+      <button class="nav_quick">
+        <div class="table0">
+          <div class="cell">
+            <div class="nav_quick_title">
+              <img src="images/quick_img.png" alt>
+              <div class="cont_text_inner robo"> QUICK </div>
+            </div>
+            <div class="nav_quick_close"> </div>
+          </div>
+        </div>
+      </button>
+    </div>
     <div class="header_wrap">
       <div class="header">
         <div class="logo">
@@ -59,7 +125,7 @@
               <a href="#" class="pc">메뉴소개</a>
               <a class="m head_menu_down">메뉴소개</a>
                <div class="header_menu_down cont_list cont_list_small cont_list_small1"
-               >
+                >
                 <ul>
                   <li><a href="#">음료</a></li>
                   <li><a href="#">푸드</a></li>
@@ -71,7 +137,7 @@
               <a href="#" class="pc">매장</a>
               <a class="m head_menu_down">매장</a>
                <div class="header_menu_down cont_list cont_list_small cont_list_small1"
-               >
+                >
                 <ul style="display: block;">
                   <li><a href="#">매장찾기</a></li>
                 </ul>
@@ -81,7 +147,7 @@
               <a href="#" class="pc">창업안내</a>
               <a class="m head_menu_down">창업안내</a>
                <div class="header_menu_down cont_list cont_list_small cont_list_small1"
-              >
+               >
                 <ul>
                   <li><a href="#">개설비용</a></li>
                   <li><a href="#">인테리어</a></li>
@@ -159,11 +225,10 @@
     </div>
     <div class="main_wrap cont_wrap" id="fullpage">
       <div class ="main fullpage-wrapper">
-        <div id="section1" class="cont_box section_main section active" date-anchor="main">
-          <div class="fp-tableCell">
+        <div id="section1" class="cont_box section_main section active">
             <div class="swiper_wrap">
               <div class="swiper">
-                <div class="swiper-container section_main_swiper swiper-container-mobile">
+                <div class="swiper-container section_main_swiper section_main_swiper1 swiper-container-mobile">
                   <ul class="swiper-wrapper">
                     <li class="swiper-slide">
                       <div
@@ -172,6 +237,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide0.jpg);"></div>
+                      <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -180,6 +255,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide1.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -188,6 +273,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide2.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -196,6 +291,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide3.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -204,6 +309,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide4.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -212,6 +327,16 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide5.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li class="swiper-slide">
                       <div
@@ -220,24 +345,34 @@
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
                       style="background-image: url(images/m-slide6.jpg);"></div>
+                        <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
-                  <div class="swiper-button_wrapper">
+                  <div class="swiper-button_wrapper swiper-paginaiton-bullets">
                     <div class="swiper-button_box">
                       <div class="swiper-button-next swiper-button-disabled"></div>
                       <div class="swiper-button-prev swiper-button-disabled"></div>
                     </div>
                   </div>
-                  <div class="swiper-page">
-                    <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
+                  <div class="swiper-pagination">
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
+                  <span class="swiper-paginaiton-bullet"></span>
                   </div>
+                  <span class="swiper-notification"></span>
                 </div>
               </div>
             </div>
@@ -249,11 +384,9 @@
                 <div class="scroll_down_text">스크롤을 내리세요!</div>
               </div>
             </div>
-          </div>
         </div>
-        <div id="section2" class="cont_box section_menu section" date-anchor="menu">
-          <div class="fp-tableCell">
-            <div class="sec2_middle">
+        <div id="section2" class="cont_box section_menu section">
+            <div class="section_middle">
               <div class="cont_boxs">
                 <div class="cont_list cont_list_content swiper_overflow_left">
                   <ul>
@@ -263,7 +396,7 @@
                           메가MGC커피 겨울시즌 신메뉴
                         </div>
                         <div
-                          class="cont_title robo fade_up animaiton03 animated"
+                          class="cont_title robo section_main_fade animation_fade_up animaiton03 animated fadeInUp"
                         >
                           <h3>
                             <span class="cont_title_bg cont_title_bg_active">
@@ -274,13 +407,13 @@
                           </h3>
                         </div>
                       </div>
-                      <div class="cont_text_wrap">
+                      <div class="cont_text_box">
                         <div
-                          class="cont_text_title fade_up animation04 animated"
+                          class="cont_text cont_text_title section_main_fade animation_fade_up animation04 animated fadeInUp"
                         >
                           <b> ㄱl억 ㄴr니 …? 달콤했던 그때 우리들…. </b>
                         </div>
-                        <div class="cont_text fade_up animation05 animated">
+                        <div class="cont_text section_main_fade animation_fade_up animation05 animated fadeInUp">
                           추운 겨울도 따뜻하게 녹여줄
                           <br />
                           그때 그 시절 추억 소환 준비 완료!
@@ -289,14 +422,13 @@
                           메가MGC커피에서 우己lㄱr バr己бㅎŁ 맛을 만나보세요!
                         </div>
                         <div
-                          class="cont_text fade_up animation06 animated"
+                          class="cont_text section_main_fade animation_fade_up animation06 animated fadeInUp"
                           style="margin-bottom: 0"
                         >
                           <a href="#">
-                            <div class="input_btn_wrap input_wrap3">
+                            <div class="input_btn_wrap input_wrap3 input_width">
                               <button class="btn btn1 btn_ani">
-                                메뉴 더보기
-                              </button>
+                              메뉴 더보기</button>
                             </div>
                           </a>
                         </div>
@@ -306,9 +438,7 @@
                       <div class="swiper_wrap">
                         <div class="swiper">
                           <div class="swiper_overflow_container">
-                            <div
-                              class="swiper-container section_menu_swiper cont_gallery_list"
-                            >
+                            <div class="swiper-container section_menu_swiper cont_gallery_list">
                               <ul class="swiper-wrapper">
                                 <li class="swiper-slide">
                                   <div class="cont_gallery_list_box">
@@ -316,7 +446,7 @@
                                       src="images/menu_gallery1.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
+                                    <div class="cont_text_box">
                                       <div class="cont_text">
                                         <div class="cont_text_inner cont_text_title text_wrap">
                                           <div class="text text1"><b>추억의 삼색 아이스 프라페</b></div>
@@ -325,14 +455,13 @@
                                           <div class="text text1">Retro Trio Gelato Frappe</div>
                                         </div>
                                       </div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      >
-                                    <div class="text_wrap">
-                                      <div class="text text2">
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
                                          포도, 멜론, 바나나 맛 삼색 젤라또를 올리고, 톡톡 튀는 팝핑 캔디를 더한 바나나&멜론 쉐이크. 어린 시절의 추억이 담긴 겨울 한정 프라페.
+                                        </div>
+                                        </div>
                                       </div>
-                                    </div></div>
                                     </div>
                                   </div>
                                 </li>
@@ -342,11 +471,20 @@
                                       src="images/menu_gallery2.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
-                                      <div class="cont_text"></div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      ></div>
+                                    <div class="cont_text_box">
+                                      <div class="cont_text">
+                                        <div class="cont_text_inner cont_text_title text_wrap">
+                                          <div class="text text1"><b>군고구마 크림브륄레 슈페너</b></div>
+                                        </div>
+                                        <div class="cont_text_inner cont_text_info text_wrap">
+                                          <div class="text text1">Roasted Sweet Potato Brûlée Cream Latte</div>
+                                      </div>
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
+                                          달콤구수한 군고구마 크림 위에빠작한 특제 브륄레 슈가를 올려 쌉싸름한 커피와 함께 즐기는 군고구마 크림브륄레 슈페너
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </li>
@@ -356,11 +494,22 @@
                                       src="images/menu_gallery3.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
-                                      <div class="cont_text"></div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      ></div>
+                                   <div class="cont_text_box">
+                                      <div class="cont_text">
+                                        <div class="cont_text_inner cont_text_title text_wrap">
+                                          <div class="text text1"><b>유자생강차</b></div>
+                                        </div>
+                                        <div class="cont_text_inner cont_text_info text_wrap">
+                                          <div class="text text1">Citron Ginger Tea</div>
+                                        </div>
+                                      </div>
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
+                                         상큼달콤한 유자청과 은은하게 매콤한 생강의 풍미를 조화롭게 담아낸 겨울 한정 과일 티
+                                        </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </li>
@@ -370,11 +519,22 @@
                                       src="images/menu_gallery4.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
-                                      <div class="cont_text"></div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      ></div>
+                                    <div class="cont_text_box">
+                                      <div class="cont_text">
+                                        <div class="cont_text_inner cont_text_title text_wrap">
+                                          <div class="text text1"><b>엠지씨네 계란물 치즈토스트</b></div>
+                                        </div>
+                                        <div class="cont_text_inner cont_text_info text_wrap">
+                                          <div class="text text1">Korean Egg Toast with Cheese</div>
+                                        </div>
+                                      </div>
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
+																						갓 구운 부드러운 옛날식 프렌치 토스트에 모짜렐라·체다 치즈와 채썬 채소를 더하고, 달콤한 설탕과 케찹으로 마무리한 K-간식.
+                                        </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </li>
@@ -384,11 +544,24 @@
                                       src="images/menu_gallery5.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
-                                      <div class="cont_text"></div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      ></div>
+                                   <div class="cont_text_box">
+                                      <div class="cont_text">
+                                        <div class="cont_text_inner cont_text_title text_wrap">
+                                          <div class="text text1"><b>엠지씨네 라면땅</b></div>
+                                        </div>
+                                        <div class="cont_text_inner cont_text_info text_wrap">
+                                          <div class="text text1">
+																						Crispy Ramyeon Snack
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
+                                         달콤 고소해진 라면 스낵에 침샘자극! 2가지 타입의 시즈닝을 더해 자꾸만 손이 가는 추억의 간식(기본맛 / 매운맛) *매운맛은 눈물 쏙 빠지게 매운 맛으로 선택에 주의하세요
+                                        </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </li>
@@ -398,18 +571,30 @@
                                       src="images/menu_gallery6.png"
                                       alt="cont_gallery_list1"
                                     />
-                                    <div class="cont_text_wrap">
-                                      <div class="cont_text"></div>
-                                      <div
-                                        class="cont_text cont_text_info"
-                                      ></div>
+                                  <div class="cont_text_box">
+                                      <div class="cont_text">
+                                        <div class="cont_text_inner cont_text_title text_wrap">
+                                          <div class="text text1"><b>가나디 키링 & 쿠앤크 케이크 세트</b></div>
+                                        </div>
+                                        <div class="cont_text_inner cont_text_info text_wrap">
+                                          <div class="text text1">Cookie and cream cake (with GANADI keyring)</div>
+                                        </div>
+                                      </div>
+                                      <div class="cont_text cont_text_info">
+                                        <div class="text_wrap">
+                                        <div class="text text2">
+                                         
+																						눈처럼 부드러운 마스카포네 크림과 달콤한 블랙 쿠키가 어우러진 천사 가나디표 쿠키앤크림 케이크와 한정판 키링 세트
+                                        </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </li>
                               </ul>
                               <div class="swiper-button-next"></div>
                               <div class="swiper-button-prev"></div>
-                              <span class="swiper-notification"></div>
+                              <span class="swiper-notification"></span>
                             </div>
                           </div>
                         </div>
@@ -417,13 +602,224 @@
                     </li>
                   </ul>
                 </div>
+            </div>
+          </div>
+        </div>
+        <div id="section3" class="cont_box section_franchise section">
+          <div class="table0">
+            <div class="cell50"></div>
+            <div class="cell50"></div>
+          </div>
+          <div class="section_middle">
+            <div class="cont_boxs">
+              <div class="cont_list cont_list_content">
+                <ul>
+                  <li>
+                    <div class="cont_title_wrap">
+                        <div class="cont_title_info">
+                          거품 없는 창업비용
+                        </div>
+                        <div class="cont_title robo section_main_fade animation_fade_up animation03 animated fadeInUp">
+                                 <h2>
+                                    FRANCHISE<br>
+                                    <span class="cont_title_bg cont_title_bg2 cont_title_bg_active">MEGA MGC COFFEE</span>
+                                 </h2>
+                              </div>
+                       <div class="cont_title_info robo section_main_fade animation_fade_up animation04 animated fadeInUp">
+											<h1><span class="comma">7,299</span></h1> 만원 (10평 기준)
+										</div>   
+                      </div>
+                      <div class="cont_text_box">
+                        <div
+                          class="cont_text cont_text_title section_main_fade animation_fade_up animation04 animated fadeInUp"
+                        >
+                          <b>지금, 메가MGC커피에서<br class="pc">창업성공 스토리를 경험해보세요.</b>
+                        </div>
+                        <div class="cont_text section_main_fade animation_fade_up animation05 animated fadeInUp">
+                         합리적인 창업비용과 다양한 경험을 바탕으로,<br class="pc">다양한 노하우를 전수하여 창업 성공을 약속드립니다.
+                        </div>
+                      </div>
+                  </li>
+                  <li class="text_center">
+                    <div class="cont_text_wrap">
+                      <div class="youtube">
+                        <iframe id="player" class="player" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="메가MGC커피 창업 정보 안내" width="100%" height="360" src="https://www.youtube.com/embed/Ppe5NIRco8A?autoplay=0&amp;playsinline=1&amp;loop=1&amp;rel=0&amp;mute=1&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fmega-mgccoffee.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fmega-mgccoffee.com%2F%23franchise&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Fmega-mgccoffee.com%2F&amp;vf=1"></iframe>
+                      </div>
+                      <a href="#" class="pc_btn">
+                        <div class="input_btn_wrap input_wrap3">
+                          <button class="btn btn2 btn_ani">창업문의 바로가기</button>
+                        </div>
+                      </a>
+                      <div class="customer_btns">
+                        <a href="#">
+                          <div class="input_btn_wrap input_wrap3">
+                            <button class="btn btn2 btn_ani">전화 문의</button>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="input_btn_wrap input_wrap3">
+                            <button class="btn btn2 btn_ani">상담 접수</button>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="cont_title_wrap"> </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        <div id="section3" class="cont_box section_franchise section" date-anchor="franchise"></div>
-        <div id="section4" class="cont_box section_company section" date-anchor="mega"></div>
-        <div id="section5" class="cont_box section_news section" date-anchor="news"></div>
-        <div id="section6" class="cont_box section_foot section" date-anchor="foot"></div>
+        </div>
+        <div id="section4" class="cont_box section_company section">
+          <div class="table0">
+            <div class="cell50"></div>
+            <div class="cell50">
+              <img src="images/main_mega_250827.jpg" alt="sec4">
+            </div>
+          </div>
+          <div class="section_middle">
+            <div class="cont_boxs">
+              <div class="cont_list cont_list_content">
+                <ul>
+                  <li>
+                    <div class="cont_title_wrap">
+                      <div class="cont_title_info"> 메가MGC커피 이야기</div>
+                      <div class="cont_title robo section_main_fade animation_fade_up animation03 animated fadeInUp">
+                        <h2>
+                          MEGA SIZE
+                          <br>
+                          <span class="cont_title_bg cont_title_bg_active">
+                            & 2 SHOT
+                          </span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="cont_text_box">
+                      <div class="cont_text cont_text_title section_main_fadie animation_fade_up animation04 animated fadeInUp">
+                        <b>100% 프리미엄 아라비카 원두를 로스팅하여,
+                          <br class="pc">깊고 부드러운 커피와 빅 사이즈로 구성된
+                          <br class="pc">다양한 음료를 합리적인 가격으로 제공합니다.
+                        </b>
+                      </div>
+                      <div class="cont_text section_main_fadie animation_fade_up animation05 animated fadeInUp">
+                        좋은 품질의 재료를, 합리적인 가격으로 제공하여<br class="pc">좋은 품질의 음료를 저렴한 가격으로 만나보실 수 있습니다.
+                      </div>
+                      <div class="cont_text section_main_fadie animation_fade_up animation06 animated fadeInUp">
+                        <div class="cont_list">
+                          <ul>
+                            <li><a href="#"><div class="input_btn_wrap input_wrap3"><button class="btn btn1 btn_ani">브랜드소개</button></div></a></li>                            
+                            <li><a href="#"><div class="input_btn_wrap input_wrap3"><button class="btn btn1 btn_ani">창업문의</button></div></a></li>                                                       
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section5" class="cont_box section_news section">
+          <div class="section_middle">
+            <div class="cont_boxs">
+              <div class="cont_title_wrap text_center">
+                <div class="cont_title_info"> 메가MGC커피 소식 </div>
+                 <div class="cont_title robo section_main_fade animation_fade_up animation03 animated fadeInUp">
+                  <h2><span class="cont_title_bg cont_title_bg_active">MEGA EVENT</span></h2>
+                 </div>
+              </div>
+              <div class="cont_text_wrap">
+                <div class="cont_list cont_list3 cont_list_m cont_list_m1 cont_gallery_list board_list_gallery">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div class="cont_gallery_list_box">
+                      <div class="cont_gallery_list_img cont_gallery_list_img_height"><img src="images/section05-list1.jpg" alt="sec05-gallery1"></div>
+                      <div class="cont_text_box">
+                        <div class="cont_text cont_text_title">
+                          <div class="text_wrap">
+                            <div class="text text1">
+                              <div class="text_wrap">
+                                <div class="text_text2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cont_text cont_text_info cont_list cont_list1 cont_list_m cont_list_m1 cont_list_small_m cont_list_small_m1">
+                          <ul>
+                            <li><div class="text_wrap"><div class="text text2"></div></div></li>
+                            <li> 2025-12-08 </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                    </li>
+                <li>
+                  <a href="#">
+                    <div class="cont_gallery_list_box">
+                      <div class="cont_gallery_list_img cont_gallery_list_img_height"><img src="images/section05-list2.jpg" alt="sec05-gallery2"></div>
+                      <div class="cont_text_box">
+                        <div class="cont_text cont_text_title">
+                          <div class="text_wrap">
+                            <div class="text text1">
+                              <div class="text_wrap">
+                                <div class="text_text2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cont_text cont_text_info cont_list cont_list1 cont_list_m cont_list_m1 cont_list_small_m cont_list_small_m1">
+                          <ul>
+                            <li><div class="text_wrap"><div class="text text2"></div></div></li>
+                            <li> 2025-12-08 </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="cont_gallery_list_box">
+                      <div class="cont_gallery_list_img cont_gallery_list_img_height"><img src="images/section05-list3.jpg" alt="sec05-gallery3"></div>
+                      <div class="cont_text_box">
+                        <div class="cont_text cont_text_title">
+                          <div class="text_wrap">
+                            <div class="text text1">
+                              <div class="text_wrap">
+                                <div class="text_text2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cont_text cont_text_info cont_list cont_list1 cont_list_m cont_list_m1 cont_list_small_m cont_list_small_m1">
+                          <ul>
+                            <li><div class="text_wrap"><div class="text text2"></div></div></li>
+                            <li> 2025-12-08 </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cont_text_wrap text_center"></div>
+            </div>
+          </div>
+        </div>
+        <div id="section6" class="cont_box section_foot section"></div>
+        <!-- <script>
+          $(".modal").on("hidden.bs.modal",function(e){
+            $(".modal-content").empty();
+          });
+          AOS.init({
+            duration:1200,
+          });
+        </script> -->
       </div>
     </div>
     </div>
@@ -472,15 +868,30 @@
 						$(".header_wrap").removeClass("header_fixed");
 					}
 
-          
-					if ( nextIndex == 3 ) {
-						player.playVideo();
-					};
+        //   if(nextIndex == 1 ){}
+        //   $(".cont_title_bg").removeClass("cont_title_bg_active");
+        // },
+        // afterLoad: function(index,nextIndex,direction){}
 
           
-          }
-        })
-      }
+				// if ( nextIndex == 3 ) {
+				// 		player.playVideo();
+				// };
+
+          $(".section").eq(nextIndex-1).find(".cont_title_bg").addClass("cont_title_bg_active");
+        },
+        afterRender: function(anchorLink, index){
+          AsideMenuList.each(function(idx){
+            $(this).click(function(){
+              $.fn.fullpage.moveTo(idx+1);
+            });
+          });
+          $(".scroll_down_icon_wrap").click(function(){
+            $.fn.fullpage.moveTo(2);
+          });
+        },
+       });
+      };
     </script>
     <!-- <script>
       
