@@ -8,11 +8,11 @@
     <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
 <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
     <link rel="stylesheet" href="mega.css" />
+    <link rel="stylesheet" href="mega-m.css" media="screen and (max-width:760px)">
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-    <!-- <script src="vendors/easings.min.js"></script> -->
     <script src="mega.js" defer></script>
   </head>
   <body class="main_body">
@@ -75,7 +75,7 @@
           </a></li>
         </ul>
       </div>
-      <button class="nav_quick">
+      <button class="nav_quick" onclick="quick(this)">
         <div class="table0">
           <div class="cell">
             <div class="nav_quick_title">
@@ -87,7 +87,7 @@
         </div>
       </button>
     </div>
-    <div class="header_wrap">
+    <div class="header_wrap right0">
       <div class="header">
         <div class="logo">
           <a href="#">
@@ -138,7 +138,7 @@
               <a class="m head_menu_down">매장</a>
                <div class="header_menu_down cont_list cont_list_small cont_list_small1"
                 >
-                <ul style="display: block;">
+                <ul>
                   <li><a href="#">매장찾기</a></li>
                 </ul>
               </div>
@@ -401,7 +401,7 @@
                           class="cont_title robo section_main_fade animation_fade_up animaiton03 animated fadeInUp"
                         >
                           <h3>
-                            <span class="cont_title_bg cont_title_bg_active">
+                            <span class="cont_title_bg">
                               Back to 2005⭐
                               <br />
                               그 시절, 우리가 사랑한 맛
@@ -440,7 +440,7 @@
                       <div class="swiper_wrap">
                         <div class="swiper">
                           <div class="swiper_overflow_container">
-                            <div class="swiper-container section_menu_swiper cont_gallery_list">
+                            <div class="swiper-container section_menu_swiper cont_gallery_list swiper-container-android">
                               <ul class="swiper-wrapper">
                                 <li class="swiper-slide">
                                   <div class="cont_gallery_list_box">
@@ -624,7 +624,7 @@
                         <div class="cont_title robo section_main_fade animation_fade_up animation03 animated fadeInUp">
                                  <h2>
                                     FRANCHISE<br>
-                                    <span class="cont_title_bg cont_title_bg2 cont_title_bg_actvie">MEGA MGC COFFEE</span>
+                                    <span class="cont_title_bg cont_title_bg2">MEGA MGC COFFEE</span>
                                  </h2>
                               </div>
                        <div class="cont_title_info robo section_main_fade animation_fade_up animation04 animated fadeInUp">
@@ -690,7 +690,7 @@
                         <h2>
                           MEGA SIZE
                           <br>
-                          <span class="cont_title_bg cont_title_bg_active">
+                          <span class="cont_title_bg">
                             & 2 SHOT
                           </span>
                         </h2>
@@ -728,7 +728,7 @@
               <div class="cont_title_wrap text_center">
                 <div class="cont_title_info"> 메가MGC커피 소식 </div>
                  <div class="cont_title robo section_main_fade animation_fade_up animation03 animated fadeInUp">
-                  <h2><span class="cont_title_bg cont_title_bg_active">MEGA EVENT</span></h2>
+                  <h2><span class="cont_title_bg">MEGA EVENT</span></h2>
                  </div>
               </div>
               <div class="cont_text_wrap">
@@ -1020,12 +1020,16 @@
 
       function fullpage(){
         var AsideMenuList = $(".aside_menu_list");
+
         $(".main").fullpage({
           anchors: ["main", "menu", "franchise", "mega", "news", "foot"],
           mediaAutoPlay: false,
+
           onLeave: function(index, nextIndex, direction){
             AsideMenuList.removeClass("on");
             AsideMenuList.eq(nextIndex-1).addClass("on");
+
+            $(".cont_title_bg").removeClass("cont_title_bg_active");
 
             $(".animation").removeClass("hidden");
             $(".animation_fade_up").addClass("animated fadeUp");
@@ -1040,12 +1044,11 @@
 					} else {
 						$(".header_wrap").removeClass("header_fixed");
 					}
-
-          if(nextIndex == 1 ){}
-          $(".cont_title_bg").removeClass("cont_title_bg_active");
         },
 
         afterLoad: function(index,nextIndex,direction){
+          $(this).find(".cont_title_bg").addClass("cont_title_bg_active");
+
           $(".animation").removeClass("hidden");
           $(".animation_fade_up").addClass("animated fadeInUp");
           if($(this).prev().find(".animation").is("hidden") == false){
@@ -1057,26 +1060,25 @@
             $(this).next().find(".animation_fade_up").removeClass("animated fadeInUp")
           }
  
-				if(player){
-          if(index === 3){
+				  if(player){
+            if(index === 3){
             player.playVideo();
-          } if(player && typeof player.pauseVideo === "function"){
+            } else if(typeof player.pauseVideo === "function"){
             player.pauseVideo();
+            }
           }
-        }
-
-        $(".section").eq(nextIndex-1).find(".cont_title_bg").addClass("cont_title_bg_active");
         },
-        afterRender: function(anchorLink, index){
+         afterRender: function(anchorLink, index){
           AsideMenuList.each(function(idx){
             $(this).click(function(){
               $.fn.fullpage.moveTo(idx+1);
             });
           });
+
           $(".scroll_down_icon_wrap").click(function(){
             $.fn.fullpage.moveTo(2);
           });
-        },
+        }
        });
       };
 
