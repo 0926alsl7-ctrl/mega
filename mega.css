@@ -121,35 +121,13 @@ b {
 /* 5. Layout */
 body {
   transition: padding 400ms ease-in-out;
+  -webkit-font-smoothing: antialiased;
 }
 .main_body {
   overflow: hidden;
   height: 100%;
 }
-/* ============================================ modal ================================================ */
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99999;
-  display: none;
-  overflow: hidden;
-  outline: 0;
-}
-.modal-dialog {
-  width: 80% !important;
-  position: absolute;
-  padding: 13% 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.modal-content {
-  border: 0;
-  background: #fff;
-}
-/* ============================================ modal ================================================ */
+
 .main {
   height: 100%;
   position: relative;
@@ -369,6 +347,8 @@ button {
   animation-fill-mode: both;
 }
 .fadeInUp {
+  transition-duration: 1.2s;
+  transition-property: opacity, transform;
   animation-name: fadeInUp;
 }
 .animation01 {
@@ -377,17 +357,17 @@ button {
 .animation02 {
   animation-delay: 0.2s !important;
 }
-.animation03 {
+/* .animation03 {
+  animation-delay: 0.4s !important;
+} */
+.animation04 {
   animation-delay: 0.4s !important;
 }
-.animation04 {
+.animation05 {
   animation-delay: 0.6s !important;
 }
-.animation05 {
-  animation-delay: 0.8s !important;
-}
 .animation06 {
-  animation-delay: 1s !important;
+  animation-delay: 0.8s !important;
 }
 @keyframes scroll_down_icon_move {
   0% {
@@ -786,13 +766,17 @@ button {
   content: "";
   background-color: #fdd000;
   position: absolute;
+  width: 0;
+  padding: 0;
   height: 50%;
   z-index: -1;
   top: 75%;
   left: 50%;
-  padding: 0;
-  width: 0;
   transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  transition-delay: 0.15s;
+  transition-timing-function: ease;
+  animation-duration: 1s;
 }
 .cont_title_bg_active::before {
   width: 100%;
@@ -1308,6 +1292,9 @@ button {
   }
   .header_menu_down_menu > ul > li {
     float: none;
+  }
+  .header_menu > ul > li > a::after {
+    display: none;
   }
   .header_wrap .header .sns {
     top: 50%;

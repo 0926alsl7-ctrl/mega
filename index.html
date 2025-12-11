@@ -16,11 +16,6 @@
     <script src="mega.js" defer></script>
   </head>
   <body class="main_body">
-    <div class="modal">
-      <div class="modal-dialog">
-        <div class="modal-content"></div>
-      </div>
-    </div>
     <div class="wrap">
     <div class="nav_wrap">
       <div class="nav">
@@ -235,6 +230,24 @@
                     <li class="swiper-slide">
                       <div
                         class="swiper-slide_img swiper-slide_img_pc"
+                        style="background-image: url(images/slide00.jpg)"
+                      ></div>
+                      <div class="swiper-slide_img swiper-slide_img_m"
+                      style="background-image: url(images/m-slide00.jpg);"></div>
+                      <div class="section_middle">
+                        <div class="cont_boxs">
+                          <div class="cont_title_wrap section_main_fade animation_fade_up animation01 animated fadeInUp">
+                            <div class="cont_title"><b></b></div>
+                          </div>
+                          <div class="cont_text_box section_main_fade animation_fade_up animation02 animated fadeInUp">
+                            <div class="cont_text cont_text_title"> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="swiper-slide">
+                      <div
+                        class="swiper-slide_img swiper-slide_img_pc"
                         style="background-image: url(images/slide0.jpg)"
                       ></div>
                       <div class="swiper-slide_img swiper-slide_img_m"
@@ -366,12 +379,6 @@
                     </div>
                   </div>
                   <div class="swiper-pagination">
-                  <span class="swiper-paginaiton-bullet"></span>
-                  <span class="swiper-paginaiton-bullet"></span>
-                  <span class="swiper-paginaiton-bullet"></span>
-                  <span class="swiper-paginaiton-bullet"></span>
-                  <span class="swiper-paginaiton-bullet"></span>
-                  <span class="swiper-paginaiton-bullet"></span>
                   <span class="swiper-paginaiton-bullet"></span>
                   </div>
                   <span class="swiper-notification"></span>
@@ -976,14 +983,6 @@
             </div>
           </div>
         </div>
-        <!-- <script>
-          $(".modal").on("hidden.bs.modal",function(e){
-            $(".modal-content").empty();
-          });
-          AOS.init({
-            duration:1200,
-          });
-        </script> -->
       </div>
     </div>
     </div>
@@ -1026,10 +1025,9 @@
           mediaAutoPlay: false,
 
           onLeave: function(index, nextIndex, direction){
+            $(this).find(".cont_title_bg").removeClass("cont_title_bg_active");
             AsideMenuList.removeClass("on");
             AsideMenuList.eq(nextIndex-1).addClass("on");
-
-            $(".cont_title_bg").removeClass("cont_title_bg_active");
 
             $(".animation").removeClass("hidden");
             $(".animation_fade_up").addClass("animated fadeUp");
