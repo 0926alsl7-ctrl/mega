@@ -774,9 +774,8 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.4s ease;
-  transition-delay: 0.15s;
+  transition-delay: 0.1s;
   transition-timing-function: ease;
-  animation-duration: 1s;
 }
 .cont_title_bg_active::before {
   width: 100%;
@@ -804,9 +803,6 @@ button {
 .section_menu .swiper {
   max-width: 420px;
 }
-/* .section_menu_swiper .swiper-slide {
-  max-width: 420px;
-} */
 
 .swiper_overflow_container {
   overflow: visible;

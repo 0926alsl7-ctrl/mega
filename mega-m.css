@@ -47,13 +47,7 @@ body {
 .pc_btn {
   display: none;
 }
-/* .modal-dialog {
-  width: 600px;
-  margin: 30px auto;
-}
-.modal-content {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-} */
+
 .cont_box {
   padding: 50px 20px !important;
 }
@@ -154,7 +148,7 @@ body {
 }
 /* header ========================================== */
 .header_wrap {
-  height: 60px;
+  height: 60px !important;
 }
 .header_wrap .header .logo {
   position: relative;
